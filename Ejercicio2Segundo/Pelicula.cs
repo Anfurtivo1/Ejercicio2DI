@@ -9,5 +9,8 @@ namespace Ejercicio2Segundo
         String Titulo;
         String Director;
         int listadoActores;
+
+        
+
     }
 }

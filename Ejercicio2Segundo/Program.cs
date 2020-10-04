@@ -28,25 +28,57 @@ namespace Ejercicio2Segundo
 
                     case 2:
 
-                        ArrayList myAL = new ArrayList();
-                        myAL.Add("Hello");
-                        myAL.Add("World");
-                        myAL.Add("!");
-                        String prueba;
+                        ArrayList peliculas;
+                        int opcionP;
+                        do
+                        {
+                            Console.WriteLine("\tElige una opcion");
+                            Console.WriteLine("\t1- Insertar peliculas");
+                            Console.WriteLine("\t2- Ver listado peliculas");
+                            Console.WriteLine("\t3- Modificar alguna pelicula de las insertadas");
+                            Console.WriteLine("\t4- Eliminar alguna pelicula de las insertadas");
+                            Console.WriteLine("\t5- Salir");
 
-                        // Displays the properties and values of the ArrayList.
-                        Console.WriteLine("myAL");
+                            opcionP = int.Parse(Console.ReadLine());
+
+                            switch (opcionP)
+                            {
+                                case 1:
+
+                                break;
+
+                                case 2:
+
+                                    break;
+
+                                case 3:
+
+                                    break;
+
+                                case 4:
+
+                                    break;
+
+                                case 5:
+
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                        } while (true);
+
+                        
+
+                        /*
                         Console.WriteLine("    Count:    {0}", myAL.Count);
                         Console.WriteLine("    Capacity: {0}", myAL.Capacity);
-                        Console.Write("    Values:");
+                        myAL.Remove(prueba);
                         for (int i = 0; i < myAL.Count; i++)
                         {
                             Console.WriteLine(myAL[i]);
                         }
-                        if (true)
-                        {
-
-                        }
+                        */
 
                         Console.ReadKey();
                         Console.Clear();
