@@ -79,23 +79,45 @@ namespace Ejercicio2Segundo
                                     String tituloN="";
                                     String directorN="";
                                     int listadoAN=1;
-                                    Console.WriteLine("Estas son todas las peliculas que se han añadido");
+                                    Console.WriteLine("Indica el titulo de la pelicula que quieres modificar");
+                                    nombrePeli = Console.ReadLine();
                                     for (int i = 0; i < peliculas.Count; i++)
                                     {
                                         pelicula2 = (Pelicula)peliculas[i];
                                         if (pelicula2.Titulo.Equals(nombrePeli))
                                         {
+                                            Console.WriteLine("Indica el director nuevo");
+                                            directorN = Console.ReadLine();
                                             pelicula2.Director = directorN;
+                                            Console.WriteLine("Indica el titulo nuevo");
+                                            tituloN = Console.ReadLine();
                                             pelicula2.Titulo = tituloN;
+                                            Console.WriteLine("Indica el listado de actores nuevos");
+                                            listadoAN = int.Parse(Console.ReadLine());
                                             pelicula2.ListadoActores = listadoAN;
                                         }
+                                        
                                     }
+                                    
 
                                     Console.ReadKey();
                                     Console.Clear();
                                     break;
 
                                 case 4:
+                                    String titulo3;
+                                    Pelicula pelicula3;
+                                    Console.WriteLine("Indica el titulo de la pelicula que quieres eliminar");
+                                    titulo3 = Console.ReadLine();
+
+                                    for (int i = 0; i < peliculas.Count; i++)
+                                    {
+                                        pelicula3 = (Pelicula)peliculas[i];
+                                        if (pelicula3.Titulo.Equals(titulo3))
+                                        {
+                                            peliculas.RemoveAt(i);
+                                        }
+                                    }
 
                                     Console.ReadKey();
                                     Console.Clear();
