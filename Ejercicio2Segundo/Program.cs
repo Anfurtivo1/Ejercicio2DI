@@ -144,6 +144,18 @@ namespace Ejercicio2Segundo
                         break;
 
                     case 3:
+                        Cliente cliente;
+                        Barco barco;
+                        double precioA;
+                        CrearCliente creacionC = new CrearCliente();
+                        CrearBarco creacionB = new CrearBarco();
+
+                        cliente=creacionC.crearcliente();
+                        barco=creacionB.crearBarco(cliente);
+
+                        precioA=creacionB.calculoAlquiler(barco,cliente);
+                        Console.WriteLine("el precio de alquiler de ese barco sería: "+precioA);
+
                         Console.ReadKey();
                         Console.Clear();
                         break;

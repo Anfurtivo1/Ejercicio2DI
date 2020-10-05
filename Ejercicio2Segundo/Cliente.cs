@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ejercicio2Segundo
 {
-     class Cliente
+     public class Cliente
     {
         private String nombreCliente;
         private String DNICliente;
@@ -12,6 +12,11 @@ namespace Ejercicio2Segundo
         private DateTime fechaFinal;
         private int posicionAmarre;
         private int barcoOcupando;
+
+        public Cliente()
+        {
+
+        }
 
         public Cliente(string nombreCliente, string dNICliente, DateTime fechaInicio, DateTime fechaFinal, int posicionAmarre, int barcoOcupando)
         {

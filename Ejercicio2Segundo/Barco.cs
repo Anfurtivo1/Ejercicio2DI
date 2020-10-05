@@ -15,7 +15,7 @@ namespace Ejercicio2Segundo
         public double Eslora { get => eslora; set => eslora = value; }
         public int AñosFabricacion { get => añosFabricacion; set => añosFabricacion = value; }
 
-        public abstract double CalcularAlquiler(Barco barco,Cliente cliente);
+        public abstract double CalcularAlquiler(Barco barco, Cliente cliente);
         //Se calcula el numero de dias de ocupacion(fechaInicio y fechaFinal incluidas) por un modulo funcion (que sale de multiplicar
         //los metros de eslora por 10) y por 12. Si son especiales:
         //para los veleros, se suma el numero de mastiles
