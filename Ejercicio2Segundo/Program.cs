@@ -48,15 +48,19 @@ namespace Ejercicio2Segundo
                             switch (opcionP)
                             {
                                 case 1:
-                                    Console.WriteLine("\tIndica el titulo");
-                                    titulo = Console.ReadLine();
-                                    Console.WriteLine("\tIndica el director");
-                                    director = Console.ReadLine();
-                                    Console.WriteLine("\tIndica la cantidad de actores");
-                                    listadoActores = int.Parse(Console.ReadLine());
+                                    do
+                                    {
+                                        Console.WriteLine("\tIndica el titulo");
+                                        titulo = Console.ReadLine();
+                                        Console.WriteLine("\tIndica el director");
+                                        director = Console.ReadLine();
+                                        Console.WriteLine("\tIndica la cantidad de actores");
+                                        listadoActores = int.Parse(Console.ReadLine());
 
-                                    pelicula = new Pelicula(titulo,director,listadoActores);
-                                    peliculas.Add(pelicula);
+                                        pelicula = new Pelicula(titulo, director, listadoActores);
+                                        peliculas.Add(pelicula);
+
+                                    } while (listadoActores!=0);
 
                                     break;
 
@@ -135,19 +139,6 @@ namespace Ejercicio2Segundo
                             }
 
                         } while (opcionP!=5);
-
-                        
-
-                        /*
-                        Console.WriteLine("    Count:    {0}", myAL.Count);
-                        Console.WriteLine("    Capacity: {0}", myAL.Capacity);
-                        myAL.Remove(prueba);
-                        for (int i = 0; i < myAL.Count; i++)
-                        {
-                            Console.WriteLine(myAL[i]);
-                        }
-                        */
-
                         Console.ReadKey();
                         Console.Clear();
                         break;
