@@ -28,9 +28,12 @@ namespace Ejercicio2Segundo
             fechaInicio = cliente.FechaInicio;
             fechaFinal = cliente.FechaFinal;
             eslora = barco.Eslora;
-            //Para probar, la fecha entre las dos será 30
-            double fechaTotal = 30;
+            double fechaTotal;
+            TimeSpan fechas;
             double total;
+
+            fechas = fechaFinal.Subtract(fechaInicio);
+            fechaTotal = fechas.Days;
 
             total = fechaTotal * eslora * 12 + this.Potencia;
             return total;

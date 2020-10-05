@@ -15,6 +15,8 @@ namespace Ejercicio2Segundo
             String fecha2;
             String fechaResta1;
             String fechaResta2;
+            DateTime fechaResta3;
+            DateTime fechaResta4;
             int numeroDias;
             TimeSpan diferenciaFecha;
             double cantidadDias;
@@ -46,10 +48,11 @@ namespace Ejercicio2Segundo
                 Console.WriteLine("Indica otra fecha");
                 fechaResta2 = Console.ReadLine();
 
+                fechaResta3 = Convert.ToDateTime(fechaResta1);
+                fechaResta4 = Convert.ToDateTime(fechaResta2);
 
-                diferenciaFecha = (fecha - fechaDias);
-                cantidadDias = diferenciaFecha.TotalDays;
-                Console.WriteLine(cantidadDias);
+                diferenciaFecha = fechaResta3.Subtract(fechaResta4);
+                Console.WriteLine("Hay una diferencia de "+diferenciaFecha+" dias");
 
                 Console.WriteLine("****COMPARAR FECHAS*****");
 
@@ -61,7 +64,21 @@ namespace Ejercicio2Segundo
                 compararFecha1 = Convert.ToDateTime(fechaAComparar1);
                 compararFecha2 = Convert.ToDateTime(fechaAComparar2);
                 cantidadComparar = compararFecha1.CompareTo(compararFecha2);
-                Console.WriteLine(cantidadComparar + " dias hay de diferencia entre ambas fechas");
+                if (cantidadComparar==1)
+                {
+                    Console.WriteLine("La fecha "+fechaAComparar1+" es mayor que la fecha "+fechaAComparar2);
+                }
+
+                if (cantidadComparar == 0)
+                {
+                    Console.WriteLine("La fecha " + fechaAComparar1 + " es igual que la fecha " + fechaAComparar2);
+                }
+
+                if (cantidadComparar == -1)
+                {
+                    Console.WriteLine("La fecha " + fechaAComparar1 + " es menor que la fecha " + fechaAComparar2);
+                }
+               
 
             }
             catch (Exception e)
